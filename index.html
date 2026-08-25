@@ -183,28 +183,56 @@ body.page-transition-exit {
 </head>
 <body class="bg-background min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<header class="relative bg-background rounded-full mt-6 px-6 py-2 mx-auto w-fit max-w-[90%] sticky top-6 border border-outline-variant/30 shadow-xl flex items-center justify-between gap-8 z-50">
-<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter" href="index.html">Haloabbas.id</a>
+<header class="bg-background rounded-full mt-6 px-8 py-3 mx-auto w-fit max-w-[90%] sticky top-6 border border-outline-variant/30 shadow-xl flex items-center justify-between gap-8 z-50">
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter" href="/">Haloabbas.id</a>
 <nav class="hidden md:flex items-center gap-6">
-<a class="font-body-md text-body-md text-on-surface font-bold border-b border-on-surface pb-0.5 active:scale-95 transition-transform" href="index.html" data-i18n="nav_home">Home</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 active:scale-95 transition-transform" href="work.html" data-i18n="nav_work">Projects</a>
+<a class="font-body-md text-body-md text-on-surface font-bold border-b border-on-surface pb-0.5 active:scale-95 transition-transform" href="/" data-i18n="nav_home">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 active:scale-95 transition-transform" href="/work" data-i18n="nav_work">Projects</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 active:scale-95 transition-transform" href="#contact" data-i18n="nav_contact">Contact</a>
 <button id="lang-toggle" class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 ml-4 flex items-center gap-1"><span class="material-symbols-outlined text-sm">language</span> ID/EN</button>
 </nav>
   
-  <!-- Mobile Menu Button -->
-  <button id="mobile-menu-btn" class="md:hidden text-on-surface flex items-center ml-2">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-  </button>
   
-  <!-- Mobile Dropdown -->
-  <div id="mobile-menu" class="hidden absolute top-[110%] left-0 right-0 bg-background border border-outline-variant/30 rounded-2xl shadow-xl flex-col p-4 gap-4 md:hidden z-50">
-      <a class="font-body-md text-body-md text-on-surface font-bold" href="index.html" data-i18n="nav_home">Home</a>
-      <a class="font-body-md text-body-md text-on-surface-variant" href="work.html" data-i18n="nav_work">Projects</a>
-      <a class="font-body-md text-body-md text-on-surface-variant" href="index.html#contact" data-i18n="nav_contact">Contact</a>
-      <button id="lang-toggle-mobile" class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-sm">language</span> ID / EN</button>
-  </div>
+  
+  
+
 </header>
+
+<!-- Mobile Menu Button (Fixed Top Right) -->
+<button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden fixed top-6 right-6 z-[60] bg-background border border-outline-variant/30 p-2.5 rounded-full shadow-xl text-on-surface flex items-center justify-center transition-transform active:scale-95">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+</button>
+
+<!-- Mobile Dropdown -->
+<div id="mobile-menu" class="hidden fixed top-20 right-6 left-6 bg-surface border border-outline-variant/30 rounded-2xl shadow-2xl flex-col p-4 gap-4 md:hidden z-[60]">
+  <a class="font-body-md text-body-md text-on-surface font-bold text-center py-2" href="/" data-i18n="nav_home">Home</a>
+  <a class="font-body-md text-body-md text-on-surface-variant text-center py-2" href="/work" data-i18n="nav_work">Projects</a>
+  <a class="font-body-md text-body-md text-on-surface-variant text-center py-2" href="/#contact" data-i18n="nav_contact">Contact</a>
+  <button id="lang-toggle-mobile" onclick="toggleLangMobile()" class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2 py-2"><span class="material-symbols-outlined text-sm">language</span> ID / EN</button>
+</div>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+    } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+    }
+}
+function toggleLangMobile() {
+    const currentLang = localStorage.getItem('language') || 'en';
+    const newLang = currentLang === 'en' ? 'id' : 'en';
+    localStorage.setItem('language', newLang);
+    if(typeof applyTranslations === 'function') {
+        applyTranslations(newLang);
+    }
+    toggleMobileMenu(); // close menu
+}
+</script>
+
 <!-- Main Content -->
 <main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop pt-2 pb-12 md:pb-24">
 <!-- Hero Section -->
@@ -227,7 +255,7 @@ body.page-transition-exit {
 <h2 class="font-display-sm text-4xl md:text-5xl font-bold text-white-custom mb-16 max-w-2xl animate-on-scroll" data-i18n="portfolio_title">My Project</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
             <!-- Kirana Tour -->
-            <div onclick="window.location.href='work.html';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full">
+            <div onclick="window.location.href='/work';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full">
                 <div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none transition-shadow duration-500 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
                     <img class="w-full h-full object-cover object-center transition-all duration-500 scale-100 group-hover:scale-105" src="gambar/portfolio/website/web-travel/kiranatour/kir-tumbhnail.jpg" alt="Kirana Tour">
                     <div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
@@ -236,7 +264,7 @@ body.page-transition-exit {
                 <h3 class="font-headline-md text-headline-md text-white-custom group-hover:text-primary transition-colors">Kirana Tour</h3>
             </div>
             <!-- QR Order System -->
-            <div onclick="window.location.href='work.html';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full mt-0 md:mt-12">
+            <div onclick="window.location.href='/work';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full mt-0 md:mt-12">
                 <div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none transition-shadow duration-500 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
                     <img class="w-full h-full object-cover object-center transition-all duration-500 scale-100 group-hover:scale-105" src="gambar/portfolio/web-app/qr-order-system/qrb-tumbhnail.jpg" alt="QR Order System">
                     <div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
@@ -245,7 +273,7 @@ body.page-transition-exit {
                 <h3 class="font-headline-md text-headline-md text-white-custom group-hover:text-primary transition-colors">QR Order System</h3>
             </div>
             <!-- ECC File Checker -->
-            <div onclick="window.location.href='work.html';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full">
+            <div onclick="window.location.href='/work';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full">
                 <div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none transition-shadow duration-500 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
                     <img class="w-full h-full object-cover object-center transition-all duration-500 scale-100 group-hover:scale-105" src="gambar/portfolio/program/ecc-file-checker/ecc-tumbhnail.jpg" alt="ECC File Checker">
                     <div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
@@ -254,7 +282,7 @@ body.page-transition-exit {
                 <h3 class="font-headline-md text-headline-md text-white-custom group-hover:text-primary transition-colors">ECC File Checker</h3>
             </div>
             <!-- Bazz Snack -->
-            <div onclick="window.location.href='work.html';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full mt-0 md:mt-12">
+            <div onclick="window.location.href='/work';" class="portfolio-item group cursor-pointer animate-on-scroll border border-outline-variant/30 rounded-lg p-3 pb-5 hover:border-outline-variant/60 flex flex-col h-full mt-0 md:mt-12">
                 <div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none transition-shadow duration-500 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
                     <img class="w-full h-full object-cover object-center transition-all duration-500 scale-100 group-hover:scale-105" src="gambar/portfolio/website/bazz-snack/bazzsnack-tumbhnail.jpg" alt="Bazz Snack">
                     <div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
@@ -264,7 +292,7 @@ body.page-transition-exit {
             </div>
         </div>
         <div class="mt-28 md:mt-32 text-center">
-            <a href="work.html" class="inline-flex items-center justify-center font-label-lg text-label-lg px-8 py-4 rounded-none bg-primary-container text-black hover:bg-primary hover:text-black transition-colors duration-300 font-bold">
+            <a href="/work" class="inline-flex items-center justify-center font-label-lg text-label-lg px-8 py-4 rounded-none bg-primary-container text-black hover:bg-primary hover:text-black transition-colors duration-300 font-bold">
                 View All Projects
             </a>
         </div>
@@ -305,11 +333,11 @@ body.page-transition-exit {
     </div>
     <div class="md:col-span-4 flex flex-col md:grid md:grid-cols-2 gap-4 mt-6 md:mt-0">
       <div class="flex flex-col gap-2">
-        <a href="index.html" class="font-label-md hover:underline" data-i18n="nav_home">Home</a>
-        <a href="work.html" class="font-label-md hover:underline" data-i18n="nav_work">Projects</a>
+        <a href="/" class="font-label-md hover:underline" data-i18n="nav_home">Home</a>
+        <a href="/work" class="font-label-md hover:underline" data-i18n="nav_work">Projects</a>
       </div>
       <div class="flex flex-col gap-2">
-        <a href="index.html#contact" class="font-label-md hover:underline" data-i18n="nav_contact">Contact</a>
+        <a href="/#contact" class="font-label-md hover:underline" data-i18n="nav_contact">Contact</a>
       </div>
     </div>
     <div class="md:col-span-4 flex flex-col md:flex-row md:justify-end gap-4 mt-6 md:mt-0">
