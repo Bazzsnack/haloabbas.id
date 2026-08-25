@@ -279,12 +279,16 @@ document.addEventListener('DOMContentLoaded', initPageTransitions);
 function updateActiveStates() {
     // Language Toggle State
     const langBtn = document.getElementById('lang-toggle');
+    const mobileLangBtn = document.getElementById('lang-toggle-mobile');
+    
+    const enHTML = '<span class="material-symbols-outlined text-sm">language</span> ID / <span class="font-bold text-on-surface border-b border-on-surface pb-0.5">EN</span>';
+    const idHTML = '<span class="material-symbols-outlined text-sm">language</span> <span class="font-bold text-on-surface border-b border-on-surface pb-0.5">ID</span> / EN';
+    
     if (langBtn) {
-        if (currentLang === 'en') {
-            langBtn.innerHTML = '<span class="material-symbols-outlined text-sm">language</span> ID / <span class="font-bold text-on-surface border-b border-on-surface pb-0.5">EN</span>';
-        } else {
-            langBtn.innerHTML = '<span class="material-symbols-outlined text-sm">language</span> <span class="font-bold text-on-surface border-b border-on-surface pb-0.5">ID</span> / EN';
-        }
+        langBtn.innerHTML = currentLang === 'en' ? enHTML : idHTML;
+    }
+    if (mobileLangBtn) {
+        mobileLangBtn.innerHTML = currentLang === 'en' ? enHTML : idHTML;
     }
 
     // Scroll Spy for Contact section

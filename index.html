@@ -141,7 +141,7 @@
         .border-interactive { border-color: #707070; }
     </style>
     <script src="js/translations.js?v=1787637423"></script>
-    <script src="js/main.js?v=clean_v3" defer></script>
+    <script src="js/main.js?v=clean_v5" defer></script>
 
 
 <style>
@@ -213,7 +213,7 @@ body.page-transition-exit {
   <a class="font-body-md text-body-md text-on-surface font-bold text-center py-2" href="/" data-i18n="nav_home">Home</a>
   <a class="font-body-md text-body-md text-on-surface-variant text-center py-2" href="/work" data-i18n="nav_work">Projects</a>
   <a class="font-body-md text-body-md text-on-surface-variant text-center py-2" href="/#contact" data-i18n="nav_contact">Contact</a>
-  <button id="lang-toggle-mobile" onclick="toggleLangMobile()" class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2 py-2"><span class="material-symbols-outlined text-sm">language</span> ID / EN</button>
+  <button id="lang-toggle-mobile" class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2 py-2"><span class="material-symbols-outlined text-sm">language</span> ID / EN</button>
 </div>
 
 <script>
@@ -230,14 +230,7 @@ function toggleMobileMenu() {
         btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
     }
 }
-function toggleLangMobile() {
-    const currentLang = localStorage.getItem('language') || 'en';
-    const newLang = currentLang === 'en' ? 'id' : 'en';
-    localStorage.setItem('language', newLang);
-    if(typeof applyTranslations === 'function') {
-        applyTranslations(newLang);
-    }
-    toggleMobileMenu();
+toggleMobileMenu();
 }
 </script>
 
