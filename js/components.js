@@ -2,15 +2,15 @@
 
 const navbarHTML = `
 <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-white/90 backdrop-blur-xl dark:bg-inverse-surface/90 font-body-md text-body-md rounded-full mt-6 mx-auto w-[90%] max-w-[1100px] shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] border border-white/60 transition-all duration-300">
-    <a href="index.html" class="flex items-center gap-2">
+    <a href="/" class="flex items-center gap-2">
         <img src="gambar/logo.png" alt="ABBAS Logo" class="h-10 w-auto">
     </a>
     
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center gap-6" id="desktop-nav-links">
-        <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="index.html" data-i18n="nav_home">Home</a>
+        <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="/" data-i18n="nav_home">Home</a>
         <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="about.html" data-i18n="nav_about">About</a>
-        <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="work.html" data-i18n="nav_work">Work</a>
+        <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="/work" data-i18n="nav_work">Work</a>
         <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="services.html" data-i18n="nav_services">Services</a>
         <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="process.html" data-i18n="nav_process">Process</a>
         <a class="nav-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors hover:scale-105 duration-200 active:scale-95" href="contact.html" data-i18n="nav_contact">Contact</a>
@@ -29,9 +29,9 @@ const navbarHTML = `
 
 <!-- Mobile Menu Overlay -->
 <div id="mobile-menu" class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 translate-y-[-100%] transition-transform duration-500 ease-in-out md:hidden">
-    <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="index.html" data-i18n="nav_home">Home</a>
+    <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="/" data-i18n="nav_home">Home</a>
     <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="about.html" data-i18n="nav_about">About</a>
-    <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="work.html" data-i18n="nav_work">Work</a>
+    <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="/work" data-i18n="nav_work">Work</a>
     <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="services.html" data-i18n="nav_services">Services</a>
     <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="process.html" data-i18n="nav_process">Process</a>
     <a class="nav-link text-headline-md text-on-surface hover:text-primary transition-colors" href="contact.html" data-i18n="nav_contact">Contact</a>
@@ -49,9 +49,9 @@ const footerHTML = `
     </div>
     <div class="flex flex-wrap gap-x-12 gap-y-6">
         <div class="flex flex-col gap-3">
-            <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="index.html" data-i18n="nav_home">Home</a>
+            <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/" data-i18n="nav_home">Home</a>
             <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="about.html" data-i18n="nav_about">About</a>
-            <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="work.html" data-i18n="nav_work">Work</a>
+            <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="/work" data-i18n="nav_work">Work</a>
             <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors" href="services.html" data-i18n="nav_services">Services</a>
         </div>
         <div class="flex flex-col gap-3">

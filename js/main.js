@@ -323,7 +323,7 @@ function updateActiveStates() {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
         const contactLink = document.querySelector('nav a[href="#contact"]');
-        const homeLink = document.querySelector('nav a[href="index.html"]');
+        const homeLink = document.querySelector('nav a[href="/"]');
         
         if (contactLink && homeLink) {
             window.addEventListener('scroll', () => {
