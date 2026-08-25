@@ -176,7 +176,9 @@ body.page-transition-exit {
 </head>
 <body class="bg-background min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<header class="bg-background rounded-full mt-6 px-8 py-3 mx-auto w-fit max-w-[90%] sticky top-6 border border-outline-variant/30 shadow-xl flex items-center justify-between gap-8 z-50">
+<div class="sticky top-6 z-50 pointer-events-none flex justify-center w-full mt-6 px-6">
+  <header class="pointer-events-auto bg-background rounded-full px-8 py-3 border border-outline-variant/30 shadow-xl flex items-center justify-between gap-8 w-fit max-w-full">
+    
 <a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter" href="/">Haloabbas.id</a>
 <nav class="hidden md:flex items-center gap-6">
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 active:scale-95 transition-transform" href="/" data-i18n="nav_home">Home</a>
@@ -189,12 +191,14 @@ body.page-transition-exit {
   
   
 
-</header>
 
-<!-- Mobile Menu Button (Fixed Top Right) -->
-<button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden fixed top-[18px] right-6 z-[60] bg-background border border-outline-variant/30 p-2.5 rounded-full shadow-xl text-on-surface flex items-center justify-center transition-transform active:scale-95">
+  </header>
+  <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="pointer-events-auto md:hidden absolute right-6 top-1/2 -translate-y-1/2 bg-background border border-outline-variant/30 p-2.5 rounded-full shadow-xl text-on-surface flex items-center justify-center transition-transform active:scale-95 z-[60]">
+    
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-</button>
+
+  </button>
+</div>
 
 <!-- Mobile Dropdown -->
 <div id="mobile-menu" class="hidden fixed top-20 right-6 left-6 bg-surface border border-outline-variant/30 rounded-2xl shadow-2xl flex-col p-4 gap-4 md:hidden z-[60]">
