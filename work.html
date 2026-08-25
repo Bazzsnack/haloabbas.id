@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Haloabbas.id - Arsip Proyek</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#c4c7c7",
+                        "secondary-container": "#484949",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "inverse-primary": "#5e5e5e",
+                        "primary-container": "#707070",
+                        "surface-container": "#201f1f",
+                        "secondary": "#c7c6c6",
+                        "secondary-fixed": "#e3e2e2",
+                        "outline": "#8e9192",
+                        "tertiary-fixed-dim": "#ccc5c4",
+                        "tertiary": "#ccc5c4",
+                        "tertiary-fixed": "#e8e1df",
+                        "surface-dim": "#141313",
+                        "surface-variant": "#353434",
+                        "on-primary-fixed-variant": "#464747",
+                        "on-primary": "#303031",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#4a4645",
+                        "background": "#141313",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#2f3131",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1e1b1a",
+                        "primary-fixed": "#e4e2e2",
+                        "primary": "#c7c6c6",
+                        "primary-fixed-dim": "#c7c6c6",
+                        "surface": "#141313",
+                        "on-primary-fixed": "#1b1c1c",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#f6f5f4",
+                        "on-secondary-container": "#b8b8b8",
+                        "on-secondary-fixed-variant": "#464747",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary": "#33302f",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#fbf4f2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#746f6e",
+                        "outline-variant": "#444748",
+                        "surface-container-highest": "#353434",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#c7c6c6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "label-md": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-400-normal.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-500-normal.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-700-normal.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+
+        . {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease-in-out;
+        }
+        
+        .group:hover . {
+            filter: grayscale(0%);
+        }
+    </style>
+    <script src="js/translations.js?v=1787632860"></script>
+    <script src="js/main.js?v=1787632860" defer></script>
+
+
+<style>
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    will-change: opacity, transform;
+}
+.animate-pop {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    will-change: opacity, transform;
+}
+.animate-on-scroll.is-visible,
+.animate-pop.is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+</style>
+<style>
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Page Transitions */
+body {
+    animation: fadeInPage 0.4s ease-out forwards;
+}
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body.page-transition-exit {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease-in !important;
+}
+</style>
+</head>
+<body class="bg-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background rounded-full mt-6 px-6 py-2 mx-auto w-fit max-w-[90%] sticky top-6 border border-outline-variant/30 shadow-xl flex items-center justify-between gap-8 z-50">
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter" href="index.html">Haloabbas.id</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 active:scale-95 transition-transform" href="index.html" data-i18n="nav_home">Home</a>
+<a class="font-body-md text-body-md text-on-surface font-bold border-b border-on-surface pb-0.5 active:scale-95 transition-transform" href="work.html" data-i18n="nav_work">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 active:scale-95 transition-transform" href="index.html#contact" data-i18n="nav_contact">Contact</a>
+<button id="lang-toggle" class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-300 ml-4 flex items-center gap-1"><span class="material-symbols-outlined text-sm">language</span> ID/EN</button>
+</nav>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Header Section -->
+<section class="mb-16">
+<a href="index.html" class="inline-flex items-center gap-2 border border-outline-variant px-5 py-2 rounded-full text-on-surface hover:bg-surface-variant transition-colors duration-200 mb-8 font-label-md uppercase tracking-widest">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    Back
+</a>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6" data-i18n="work_title">My Project</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl animate-on-scroll" data-i18n="work_subtitle">Here is a collection of my projects across several categories.</p>
+</section>
+<!-- Filter Bar -->
+<div class="flex flex-wrap gap-3 mb-12 justify-center animate-on-scroll">
+    <button class="filter-btn active font-label-md text-label-md px-4 py-2 rounded-full border border-primary-container bg-surface-container text-on-surface hover:bg-surface-variant transition-colors" data-filter="all">All</button>
+    <button class="filter-btn font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-primary-container hover:text-on-surface transition-colors" data-filter="web">Web</button>
+    <button class="filter-btn font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-primary-container hover:text-on-surface transition-colors" data-filter="app">App</button>
+    <button class="filter-btn font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-primary-container hover:text-on-surface transition-colors" data-filter="tools">Tools</button>
+
+</div>
+<!-- Project Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Kirana Tour -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="web" data-gallery="[&quot;gambar/portfolio/website/web-travel/kiranatour/kir-tumbhnail.jpg&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105124.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105146.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105157.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105223.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105246.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105300.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105313.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105345.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105423.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105431.png&quot;, &quot;gambar/portfolio/website/web-travel/kiranatour/Cuplikan layar 2026-08-25 105441.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/website/web-travel/kiranatour/kir-tumbhnail.jpg" alt="Kirana Tour"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Web</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Kirana Tour</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_kiranatour">Tourism website offering customized vacation experiences with beautiful destination showcases.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+        <!-- Fazzio Landing Page -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="web" data-gallery="[&quot;gambar/portfolio/landingpage/fazzio/fazio-tumbhnail.jpg&quot;, &quot;gambar/portfolio/landingpage/fazzio/fazzio2.png&quot;, &quot;gambar/portfolio/landingpage/fazzio/fazzio3.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/landingpage/fazzio/fazio-tumbhnail.jpg" alt="Fazzio Landing Page"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Web</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Fazzio Landing Page</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_fazzio">High-conversion promotional landing page for Yamaha Fazzio motorcycle campaign.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Lovegen AI -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="web" data-gallery="[&quot;gambar/portfolio/website/lovegen/lov-tumbhnail.jpg&quot;, &quot;gambar/portfolio/website/lovegen/Cuplikan layar 2026-07-13 123529.png&quot;, &quot;gambar/portfolio/website/lovegen/Cuplikan layar 2026-07-13 123559.png&quot;, &quot;gambar/portfolio/website/lovegen/Cuplikan layar 2026-07-13 123607.png&quot;, &quot;gambar/portfolio/website/lovegen/Cuplikan layar 2026-07-13 123622.png&quot;, &quot;gambar/portfolio/website/lovegen/Cuplikan layar 2026-07-13 123828.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/website/lovegen/lov-tumbhnail.jpg" alt="Lovegen AI"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Web</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Lovegen AI</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_lovegen">Interactive website platform leveraging AI to generate creative and engaging content.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Bazz Snack E-Commerce -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="web" data-gallery="[&quot;gambar/portfolio/website/bazz-snack/bazzsnack-tumbhnail.jpg&quot;, &quot;gambar/portfolio/website/bazz-snack/Cuplikan layar 2026-08-25 103808.png&quot;, &quot;gambar/portfolio/website/bazz-snack/Cuplikan layar 2026-08-25 103818.png&quot;, &quot;gambar/portfolio/website/bazz-snack/Cuplikan layar 2026-08-25 103827.png&quot;, &quot;gambar/portfolio/website/bazz-snack/Cuplikan layar 2026-08-25 103934.png&quot;, &quot;gambar/portfolio/website/bazz-snack/Cuplikan layar 2026-08-25 103951.png&quot;, &quot;gambar/portfolio/website/bazz-snack/Cuplikan layar 2026-08-25 104008.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/website/bazz-snack/bazzsnack-tumbhnail.jpg" alt="Bazz Snack E-Commerce"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Web</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Bazz Snack E-Commerce</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_bazz-snack">Modern e-commerce website for a snack brand featuring a seamless checkout experience.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- AV Tour & Travel -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="web" data-gallery="[&quot;gambar/portfolio/website/web-travel/avtour/avtour-tumbhnail.jpg&quot;, &quot;gambar/portfolio/website/web-travel/avtour/avtour4.png&quot;, &quot;gambar/portfolio/website/web-travel/avtour/avtour5.png&quot;, &quot;gambar/portfolio/website/web-travel/avtour/avtour6.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/website/web-travel/avtour/avtour-tumbhnail.jpg" alt="AV Tour & Travel"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Web</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">AV Tour & Travel</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_avtour">Travel agency website showcasing tour packages, itineraries, and easy online booking.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- ECC File Checker -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="tools" data-gallery="[&quot;gambar/portfolio/program/ecc-file-checker/ecc-tumbhnail.jpg&quot;, &quot;gambar/portfolio/program/ecc-file-checker/ecc-file-checker2.png&quot;, &quot;gambar/portfolio/program/ecc-file-checker/ecc-file-checker3.png&quot;, &quot;gambar/portfolio/program/ecc-file-checker/ecc-file-checker4.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-contain bg-white " loading="lazy" src="gambar/portfolio/program/ecc-file-checker/ecc-tumbhnail.jpg" alt="ECC File Checker"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Tools</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">ECC File Checker</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_ecc-file-checker">Desktop utility program for verifying file integrity and performing batch error-checking.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Duplicate Analyzer -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="tools" data-gallery="[&quot;gambar/portfolio/program/file-duplicate-analyzer/duplicate-tumbhnail.jpg&quot;, &quot;gambar/portfolio/program/file-duplicate-analyzer/file-duplicate-analyzer2.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-contain bg-white " loading="lazy" src="gambar/portfolio/program/file-duplicate-analyzer/duplicate-tumbhnail.jpg" alt="Duplicate Analyzer"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">Tools</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Duplicate Analyzer</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_file-duplicate-analyzer">Efficient desktop application to scan, analyze, and safely remove duplicate files to free up storage.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Kos Manager Mobile -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="app" data-gallery="[&quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-tumbhnail.jpg&quot;, &quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-cover.webp&quot;, &quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-ui1.png&quot;, &quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-ui2.png&quot;, &quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-ui3.png&quot;, &quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-ui4.png&quot;, &quot;gambar/portfolio/apk-mobile/kos-manager/kos-mobile-ui5.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/apk-mobile/kos-manager/kos-mobile-tumbhnail.jpg" alt="Kos Manager Mobile"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">App</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Kos Manager Mobile</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_kos-manager">Mobile application for managing boarding house operations, payments, and tenant communication.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Kos Management Dashboard -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="app" data-gallery="[&quot;gambar/portfolio/web-app/web-app-kos/koss-tumbhnail.jpg&quot;, &quot;gambar/portfolio/web-app/web-app-kos/kos-manager-cover-1.png&quot;, &quot;gambar/portfolio/web-app/web-app-kos/kos-manager-cover-2.png&quot;, &quot;gambar/portfolio/web-app/web-app-kos/kos-manager-cover-3.png&quot;, &quot;gambar/portfolio/web-app/web-app-kos/kos-manager-cover-4.png&quot;, &quot;gambar/portfolio/web-app/web-app-kos/kos-manager-cover.webp&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/web-app/web-app-kos/koss-tumbhnail.jpg" alt="Kos Management Dashboard"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">App</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Kos Management Dashboard</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_web-app-kos">Web application dashboard for property owners to monitor room availability, revenue, and tenant data.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Web POS System -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="app" data-gallery="[&quot;gambar/portfolio/web-app/web-app-kasir/pos-tumbhnail.jpg&quot;, &quot;gambar/portfolio/web-app/web-app-kasir/web-pos-1.webp&quot;, &quot;gambar/portfolio/web-app/web-app-kasir/web-pos-2.png&quot;, &quot;gambar/portfolio/web-app/web-app-kasir/web-pos-3.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/web-app/web-app-kasir/pos-tumbhnail.jpg" alt="Web POS System"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">App</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Web POS System</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_web-app-kasir">Comprehensive web-based Point of Sale system with inventory and sales reporting features.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Laundry Pulse -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="app" data-gallery="[&quot;gambar/portfolio/apk-mobile/laundry-pulse/laundry-tumbhnail.jpg&quot;, &quot;gambar/portfolio/apk-mobile/laundry-pulse/laundry-mobile-cover.webp&quot;, &quot;gambar/portfolio/apk-mobile/laundry-pulse/laundry-mobile-ui1.png&quot;, &quot;gambar/portfolio/apk-mobile/laundry-pulse/laundry-mobile-ui2.png&quot;, &quot;gambar/portfolio/apk-mobile/laundry-pulse/laundry-mobile-ui3.png&quot;, &quot;gambar/portfolio/apk-mobile/laundry-pulse/laundry-mobile-ui4.png&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/apk-mobile/laundry-pulse/laundry-tumbhnail.jpg" alt="Laundry Pulse"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">App</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Laundry Pulse</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_laundry-pulse">Mobile POS and tracking system for laundry businesses with real-time order updates.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            <!-- QR Order System -->
+            <article class="portfolio-item group bg-surface-container animate-pop border border-outline-variant/30 rounded flex flex-col hover:border-outline hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer" data-category="app" data-gallery="[&quot;gambar/portfolio/web-app/qr-order-system/qrb-tumbhnail.jpg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system1.jpeg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system2.jpeg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system3.jpeg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system4.jpeg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system5.jpeg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system6.jpeg&quot;, &quot;gambar/portfolio/web-app/qr-order-system/qr-order-system7.jpeg&quot;]">
+                <div class="h-48 w-full bg-surface-variant rounded-t overflow-hidden relative">
+                    <img class="w-full h-full object-cover object-top " loading="lazy" src="gambar/portfolio/web-app/qr-order-system/qrb-tumbhnail.jpg" alt="QR Order System"/>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block font-label-md text-label-md text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full w-fit mb-4 border border-outline-variant/30">App</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">QR Order System</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6" data-i18n="work_desc_qr-order-system">Web-based contactless ordering system for restaurants and cafes via QR code scanning.</p>
+                    <a class="font-label-md text-label-md text-on-surface flex items-center gap-2 hover:text-primary transition-colors mt-auto" href="javascript:void(0)">
+                        <span data-i18n="work_view_case">View Details</span> <span aria-hidden="true" class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+            </section>
+</main>
+<!-- Footer -->
+<footer class="bg-transparent border-t border-outline-variant/20 text-on-surface w-full py-12 px-margin-mobile md:px-margin-desktop">
+  <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    <div class="md:col-span-4">
+      <span class="font-headline-md text-headline-md font-bold tracking-tighter">Haloabbas.id</span>
+      <p class="mt-4 text-body-md opacity-80" data-i18n="footer_tagline">Build Anything With AI</p>
+    </div>
+    <div class="md:col-span-4 grid grid-cols-2 gap-4">
+      <div class="flex flex-col gap-2">
+        <a href="index.html" class="font-label-md hover:underline" data-i18n="nav_home">Home</a>
+        <a href="work.html" class="font-label-md hover:underline" data-i18n="nav_work">Projects</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="index.html#contact" class="font-label-md hover:underline" data-i18n="nav_contact">Contact</a>
+      </div>
+    </div>
+    <div class="md:col-span-4 flex md:justify-end gap-6">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/haloabbas.id?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" class="hover:opacity-70 transition-opacity">Instagram</a>
+      <a href="#" style="display: none;" class="hover:opacity-70 transition-opacity">LinkedIn</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@haloabbas.id?is_from_webapp=1&sender_device=pc" class="hover:opacity-70 transition-opacity">Tiktok</a>
+    </div>
+    <div class="md:col-span-12 border-t border-white/20 pt-8 mt-8 text-center opacity-60 text-label-md">&copy; 2026 Haloabbas.id.</div>
+  </div>
+</footer>
+</body></html>

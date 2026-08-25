@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How I Work - ABBAS</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#2b6cf0",
+                    "on-tertiary-container": "#34485d",
+                    "on-tertiary-fixed-variant": "#35485e",
+                    "outline-variant": "#bbc9cd",
+                    "tertiary": "#4d6077",
+                    "error-container": "#ffdad6",
+                    "background": "#f5fafd",
+                    "outline": "#6c797d",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#a2b6d0",
+                    "on-secondary-fixed": "#001848",
+                    "surface-dim": "#d6dbde",
+                    "primary": "#006878",
+                    "on-secondary-container": "#fefcff",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#071d30",
+                    "surface-container-low": "#eff4f7",
+                    "on-background": "#171c1f",
+                    "surface-tint": "#006878",
+                    "surface": "#f5fafd",
+                    "surface-variant": "#dee3e6",
+                    "secondary-fixed": "#dae2ff",
+                    "on-surface": "#171c1f",
+                    "surface-container": "#eaeff2",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f5fafd",
+                    "on-primary-container": "#004d59",
+                    "on-primary-fixed-variant": "#004e5a",
+                    "tertiary-fixed-dim": "#b4c8e3",
+                    "on-secondary-fixed-variant": "#003fa3",
+                    "secondary": "#0053cf",
+                    "primary-fixed": "#a5eeff",
+                    "inverse-on-surface": "#ecf1f4",
+                    "on-primary-fixed": "#001f25",
+                    "inverse-primary": "#44d8f3",
+                    "surface-container-high": "#e4e9ec",
+                    "tertiary-fixed": "#d0e4ff",
+                    "on-surface-variant": "#3c494c",
+                    "surface-container-highest": "#dee3e6",
+                    "secondary-fixed-dim": "#b2c5ff",
+                    "primary-container": "#22c5e0",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#44d8f3",
+                    "inverse-surface": "#2c3134"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px",
+                    "2xl": "24px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "label-mono": ["JetBrains Mono"],
+                    "headline-md": ["Space Grotesk"],
+                    "display-xl": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #f5fafd; /* surface */
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Subtle Noise Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Abstract Background Blobs */
+        .blob {
+            position: absolute;
+            filter: blur(100px);
+            opacity: 0.4;
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 20s infinite ease-in-out;
+        }
+        .blob-1 {
+            top: -10%; left: -10%; width: 50vw; height: 50vw;
+            background: radial-gradient(circle, rgba(34,197,224,0.3) 0%, rgba(34,197,224,0) 70%);
+        }
+        .blob-2 {
+            bottom: -20%; right: -10%; width: 60vw; height: 60vw;
+            background: radial-gradient(circle, rgba(0,104,120,0.2) 0%, rgba(0,104,120,0) 70%);
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        /* Glassmorphism Utility */
+        .glass-panel {
+            background: rgba(245, 250, 253, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(34, 197, 224, 0.05);
+        }
+
+        /* Hide scrollbar for horizontal scrolling timeline */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Background Decoration -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-surface/60 backdrop-blur-xl dark:bg-inverse-surface/60 border border-white/50 dark:border-outline-variant/30 shadow-[0_8px_32px_0_rgba(34,197,224,0.1)] rounded-full mt-4 mx-auto w-[95%] max-w-container">
+<!-- Brand -->
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-primary-fixed hover:scale-105 transition-transform duration-200">
+            ABBAS
+        </div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200 active:scale-95 transition-all duration-150" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200 active:scale-95 transition-all duration-150" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200 active:scale-95 transition-all duration-150" href="#">Work</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200 active:scale-95 transition-all duration-150" href="#">Services</a>
+<!-- Active State -->
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-body-md text-body-md hover:scale-105 transition-transform duration-200 active:scale-95 transition-all duration-150" href="#">Process</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200 active:scale-95 transition-all duration-150" href="#">Contact</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant dark:text-on-tertiary-container font-label-mono text-label-mono hidden md:block">ID/EN</span>
+<a class="font-body-md text-body-md px-6 py-2 rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary hover:shadow-[0_0_20px_rgba(34,197,224,0.4)] transition-all duration-300 active:scale-95" href="#">
+                Let's Talk
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-container mx-auto px-margin-mobile md:px-gutter pt-32 pb-section-gap flex flex-col gap-section-gap">
+<!-- Header Section -->
+<section class="flex flex-col items-center text-center mt-12 md:mt-24">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4 opacity-80">Methodology</span>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-2">How I work</h1>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface-variant opacity-60">Cara saya kerja</h2>
+</section>
+<!-- Horizontal Timeline Section -->
+<section class="w-full">
+<div class="flex overflow-x-auto gap-6 pb-8 no-scrollbar snap-x snap-mandatory">
+<!-- Step 1: Discovery -->
+<div class="glass-panel rounded-2xl p-8 min-w-[280px] md:min-w-0 md:flex-1 flex flex-col items-start snap-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/40 transition-colors duration-500"></div>
+<div class="w-12 h-12 rounded-full bg-surface-bright border border-white flex items-center justify-center mb-6 shadow-sm relative z-10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-50 mb-2">01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10">Discovery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Understanding the core problem, user needs, and business objectives before writing a single line of code.</p>
+</div>
+<!-- Step 2: Design -->
+<div class="glass-panel rounded-2xl p-8 min-w-[280px] md:min-w-0 md:flex-1 flex flex-col items-start snap-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/40 transition-colors duration-500"></div>
+<div class="w-12 h-12 rounded-full bg-surface-bright border border-white flex items-center justify-center mb-6 shadow-sm relative z-10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">design_services</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-50 mb-2">02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10">Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Crafting intuitive, glass-smooth interfaces and establishing a robust architectural blueprint.</p>
+</div>
+<!-- Step 3: Build -->
+<div class="glass-panel rounded-2xl p-8 min-w-[280px] md:min-w-0 md:flex-1 flex flex-col items-start snap-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/40 transition-colors duration-500"></div>
+<div class="w-12 h-12 rounded-full bg-surface-bright border border-white flex items-center justify-center mb-6 shadow-sm relative z-10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-50 mb-2">03</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10">Build</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Executing the vision with clean, scalable code, leveraging modern frameworks and AI assistance.</p>
+</div>
+<!-- Step 4: Test -->
+<div class="glass-panel rounded-2xl p-8 min-w-[280px] md:min-w-0 md:flex-1 flex flex-col items-start snap-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/40 transition-colors duration-500"></div>
+<div class="w-12 h-12 rounded-full bg-surface-bright border border-white flex items-center justify-center mb-6 shadow-sm relative z-10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bug_report</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-50 mb-2">04</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10">Test</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Rigorous quality assurance, performance tuning, and cross-device validation to ensure perfection.</p>
+</div>
+<!-- Step 5: Launch -->
+<div class="glass-panel rounded-2xl p-8 min-w-[280px] md:min-w-0 md:flex-1 flex flex-col items-start snap-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/40 transition-colors duration-500"></div>
+<div class="w-12 h-12 rounded-full bg-surface-bright border border-white flex items-center justify-center mb-6 shadow-sm relative z-10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-50 mb-2">05</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 relative z-10">Launch</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">Deployment, post-launch monitoring, and handing over the keys to a polished digital product.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Tools & Timeline -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Tools & Workflow Note -->
+<div class="glass-panel rounded-2xl p-8 lg:col-span-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Tools &amp; Workflow</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        My process is augmented by intelligent tooling, enabling a rapid AI-assisted build phase. This means less time writing boilerplate and more time refining the user experience.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-label-mono px-3 py-1 bg-[#E8F4FB] text-on-secondary-fixed rounded-full">Figma</span>
+<span class="font-label-mono text-label-mono px-3 py-1 bg-[#E8F4FB] text-on-secondary-fixed rounded-full">React</span>
+<span class="font-label-mono text-label-mono px-3 py-1 bg-[#E8F4FB] text-on-secondary-fixed rounded-full">Tailwind</span>
+<span class="font-label-mono text-label-mono px-3 py-1 bg-[#E8F4FB] text-on-secondary-fixed rounded-full">Cursor AI</span>
+<span class="font-label-mono text-label-mono px-3 py-1 bg-[#E8F4FB] text-on-secondary-fixed rounded-full">Vercel</span>
+</div>
+</div>
+<!-- Estimated Timeline Table -->
+<div class="glass-panel rounded-2xl p-8 lg:col-span-2">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                    Typical Project Timeline
+                </h3>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-white/40">
+<th class="py-4 px-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Phase</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Duration</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Deliverables</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<tr class="border-b border-white/20 hover:bg-white/10 transition-colors">
+<td class="py-4 px-4 font-medium">1. Discovery &amp; Scope</td>
+<td class="py-4 px-4 text-on-surface-variant">1-2 Weeks</td>
+<td class="py-4 px-4 text-on-surface-variant">Project Brief, Architecture Plan</td>
+</tr>
+<tr class="border-b border-white/20 hover:bg-white/10 transition-colors">
+<td class="py-4 px-4 font-medium">2. UI/UX Design</td>
+<td class="py-4 px-4 text-on-surface-variant">2-3 Weeks</td>
+<td class="py-4 px-4 text-on-surface-variant">High-fidelity Figma Prototypes</td>
+</tr>
+<tr class="border-b border-white/20 hover:bg-white/10 transition-colors">
+<td class="py-4 px-4 font-medium">3. Development</td>
+<td class="py-4 px-4 text-on-surface-variant">3-6 Weeks</td>
+<td class="py-4 px-4 text-on-surface-variant">Functional Staging Link</td>
+</tr>
+<tr class="hover:bg-white/10 transition-colors">
+<td class="py-4 px-4 font-medium">4. Review &amp; Launch</td>
+<td class="py-4 px-4 text-on-surface-variant">1 Week</td>
+<td class="py-4 px-4 text-on-surface-variant">Live Production Site</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="flex flex-col items-center justify-center text-center py-24">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">Ready to start building?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">Let's discuss your project requirements and see how we can bring your ideas to life with speed and precision.</p>
+<a class="font-body-lg text-body-lg px-8 py-4 rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary shadow-[0_4px_20px_rgba(34,197,224,0.3)] hover:shadow-[0_8px_32px_rgba(34,197,224,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2" href="#">
+                Get in touch
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full px-margin-mobile md:px-gutter py-section-gap flex flex-col md:flex-row justify-between items-start bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant/30 rounded-t-[24px] shadow-none mt-auto">
+<!-- Brand & Copyright -->
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-primary-fixed mb-4">
+                ABBAS
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant opacity-80 max-w-sm">
+                © 2024 Abbas. Turning ideas into digital products.
+            </p>
+</div>
+<!-- Links -->
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">Work</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">Services</a>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Active Footer Link (Process) -->
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed" href="#">Process</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:opacity-80 transition-colors transition-opacity" href="#">WhatsApp</a>
+</div>
+</div>
+</footer>
+</body></html>

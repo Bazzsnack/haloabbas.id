@@ -1,0 +1,10 @@
+# Python and temporary scripts
+*.py
+__pycache__/
+
+# Mac OS files
+.DS_Store
+
+# Any IDE specific folders if they exist
+.vscode/
+.idea/

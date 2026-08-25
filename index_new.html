@@ -1,0 +1,263 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Adrian.AI - AI Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "background": "#141313",
+                        "surface-container-highest": "#353434",
+                        "primary-fixed": "#e4e2e2",
+                        "on-secondary": "#2f3131",
+                        "on-secondary-container": "#b8b8b8",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353434",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#5e5e5e",
+                        "inverse-on-surface": "#313030",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#ccc5c4",
+                        "outline": "#8e9192",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#141313",
+                        "secondary": "#c7c6c6",
+                        "primary-fixed-dim": "#c7c6c6",
+                        "outline-variant": "#444748",
+                        "on-tertiary-fixed-variant": "#4a4645",
+                        "tertiary-container": "#746f6e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "primary": "#c7c6c6",
+                        "primary-container": "#707070",
+                        "on-tertiary-container": "#fbf4f2",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-primary": "#303031",
+                        "tertiary-fixed-dim": "#ccc5c4",
+                        "on-primary-container": "#f6f5f4",
+                        "tertiary-fixed": "#e8e1df",
+                        "secondary-fixed": "#e3e2e2",
+                        "on-tertiary-fixed": "#1e1b1a",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-tertiary": "#33302f",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#464747",
+                        "surface": "#141313",
+                        "surface-tint": "#c7c6c6",
+                        "secondary-container": "#484949",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "label-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "body-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #1A1A1A;
+            color: #AAAAAA;
+        }
+        .text-on-surface { color: #FFFFFF; }
+        .text-grey-light { color: #AAAAAA; }
+        .text-grey-dark { color: #707070; }
+        .bg-surface-custom { background-color: #242424; }
+        .border-outline-custom { border-color: #2D2D2D; }
+        .border-interactive { border-color: #707070; }
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar from JSON -->
+<nav class="bg-background w-[90%] max-w-container-max mx-auto top-4 sticky border border-outline-variant rounded-full transition-all duration-300 ease-in-out z-50">
+<div class="flex justify-between items-center h-16 px-8 w-full">
+<a class="font-bold text-on-background tracking-tighter text-body-md truncate max-w-[200px] md:max-w-none" href="#">NASRIL ABBAS MUTHOHARUN ERGI PRATAMA</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Work</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Expertise</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Process</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-2 rounded-full hover:bg-secondary-container transition-colors duration-200">Hire Me</button>
+</div>
+</nav>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24 text-center">
+<div class="w-64 h-64 md:w-80 md:h-80 bg-white blob-shape mb-12 flex items-center justify-center p-2">
+<img class="w-full h-full object-cover blob-shape grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional male AI developer sitting at a sleek, minimalist desk setup with multiple monitors displaying complex code and data visualizations. The setting is a highly modern, dark-themed studio with subtle cool blue and stark white lighting highlighting his focused expression. The style is ultra-realistic, high-end corporate photography, adhering to a sophisticated monochrome aesthetic with sharp contrasts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7q9LvZC7HxPrXBSRjJmcuDXZ7f-YqmtNkfIN-RNMoKRbwf_NDM2iDV8eBBj6iE_ygXtq05yGQJL7n3qfcELXOw8mBQ2feBEniXswnlRibvoQu0s1eaCeDf_gJN_SfXUnVWo8JlpfkTUiSYM9HFUi8-fmiF5lGSlJ7ebxXxbpNEwu75RYX56m5zfqKKp1XNKK_alT0cSgyd-aZhtt3VHAyjmlru7eZRXPO-_hL1517VYAJmxaPXbzxug">
+</div>
+<div class="flex items-center gap-2 mb-6">
+<div class="flex text-grey-dark">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-grey-light">Expert Level</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl mb-6">Building Intelligent Solutions with AI</h1>
+<p class="font-body-lg text-body-lg text-grey-light max-w-2xl mb-12">Delivering cutting-edge artificial intelligence development and integration for all industries and business scales.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-background px-8 py-4 font-label-md text-label-md rounded-none hover:bg-white transition-colors duration-200">Start AI Project</button>
+<button class="bg-transparent border border-interactive text-grey-light px-8 py-4 font-label-md text-label-md rounded-none hover:text-on-surface hover:border-white transition-colors duration-200">View Portfolio</button>
+</div>
+</section>
+<!-- Statistics Section -->
+
+<!-- Portfolio Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-16 max-w-2xl">Turning <span class="text-grey-dark">Concepts</span> Into AI <span class="text-grey-dark">Masterpieces</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A highly detailed, sophisticated UI dashboard for an AI analytics platform. The design is displayed on a stark dark background with sharp white and subtle grey accents. Data visualizations like complex node graphs and elegant bar charts are visible. The aesthetic is ultra-modern, clean, and minimalist, emphasizing professional engineering and high-end software development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxfPdZMAcdkbzBLpomaCCLdWRJQw1R7rbjEWnX9eJ99MMe7NjXhyL6FujYd23ifFPEKFVVpHzHsNh0VvyCTYMI_GXb3NDkjw469B5RDpfiMfKCaGku8XKACl-RXsE_rF5ii7ETEdm2wMfyCZWkQH8utyZ4tI2tJSDO5ceGlVj0nYchDQWlZ-CwXhfkEIX18NDho1lhVQrJrK6DqXD4ulu8e6Ptphju_voeiL_diXrRwxRrjdbc83EI8g">
+<div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
+</div>
+<div class="flex gap-2 mb-2">
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">AI Integration</span>
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">Dashboard</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Nexus Analytics</h3>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer mt-0 md:mt-12">
+<div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A close-up shot of an abstract, generative AI art output representing neural networks. Countless glowing white lines and nodes connect intricate patterns against a deep pitch-black void. The visual style is highly technical, monochrome, and conveys complex algorithmic processing and cutting-edge machine learning capabilities in a minimalist professional context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPLjWMuL55r4ZzKNdD7VZsERf6Mvlgz_9PSSvU0ODfOhSZElP_Yh67Le1tbaowOrrPGASVI2o7tO9bTP38bhz45LFzdicZdHsGbAKZs8Ndmqj6nFsCo3tcNJeaV4ooS1_RmpVA1ApqECA1tWLOEqYGBZ82zauJ_uEMDeCc8bhjBi6RLSwStcyKABjlE8ZmJZwqtnk5X8acs4V0FT7DOXCjwRaoie6X9fJUgMDJNToAMzph8Waw8MSR2g">
+<div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
+</div>
+<div class="flex gap-2 mb-2">
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">Generative AI</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">SynthCore Engine</h3>
+</div>
+<!-- Project 3 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A sleek mobile application interface showcasing a smart virtual assistant. The screen displays a minimalist chat interface with sharp typography and subtle grey gradient bubbles. The background is a stark, textured dark surface. The overall mood is sophisticated, functional, and embodies high-end UI/UX design tailored for AI integrations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2j8iIp5BmeDT50tIcE1tml0ohnzpSzi_I5B20_ECwQ3dWED5hRXvAMgXSwcHHs_Wxd_XhYdpziIGeKvfepOwJcgubRIWzu1Rmd4tSJ4zFnZW6rDBB66ixyDAIMNBW0i-Wl2lMq9QtK0TgRaZ586AcrkhYVbKtB2Z-20AZpcNdtzIVCAGpTnh3RFL5Dniaq3aLOT_W6DE3ArnL1I22QFVkKYPNjxGt6-13U6MmBp6i-gk3awZlBQ_cWA">
+<div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
+</div>
+<div class="flex gap-2 mb-2">
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">NLP</span>
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">Mobile</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Aura Assistant</h3>
+</div>
+<!-- Project 4 -->
+<div class="group cursor-pointer mt-0 md:mt-12">
+<div class="bg-surface-custom border border-outline-custom aspect-video relative overflow-hidden mb-4 rounded-none">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105" data-alt="A high-contrast conceptual visualization of an automated workflow system. Geometric shapes and crisp lines interconnect like a precise blueprint on a dark canvas. The color palette is strictly monochrome, utilizing deep charcoal, mid-greys, and bright white to highlight the flow of data. It looks highly professional and engineered." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsZCTIH1_Ftwc3GmyB58hIEu2UyJyzeryEyiI_z6hDRXfrvM_X2PDhTluEtQvbEfh4iQvU9-59-4ca7r6pz3fJzdC5JyM_Dwqz-1h8DnAD7CQzRHW20n_-_I_6vyiKPnK08mkzECiSHpf1-BbPxZgopDGJwAfxajl0nxDaSzCoOMMKcZr-5tsdiVmooZxBJYrAYGQYZip2KAKKbpEIK-fcv3s9oVMLiqbFSYs8Pyb3GzulIhSerQZi0g">
+<div class="absolute inset-0 border border-transparent group-hover:border-interactive transition-colors duration-300 z-10 pointer-events-none"></div>
+</div>
+<div class="flex gap-2 mb-2">
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">Automation</span>
+<span class="bg-[#333333] text-grey-light font-label-md text-[12px] px-3 py-1 rounded-full">B2B</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">FlowState Automation</h3>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24 border-t border-outline-custom">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+    <div class="flex flex-col justify-center">
+      <h2 class="font-display-lg text-display-lg text-on-surface mb-6">Get in Touch Today!</h2>
+      <p class="font-body-lg text-body-lg text-grey-light max-w-md">
+        Ready to elevate your business with intelligent AI solutions? Let's discuss your next project.
+      </p>
+    </div>
+    <div class="bg-surface-custom border border-outline-custom p-8">
+      <form class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          <label class="font-label-md text-label-md text-grey-light uppercase tracking-wider">Name</label>
+          <input type="text" placeholder="Your Name" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors">
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="font-label-md text-label-md text-grey-light uppercase tracking-wider">Email</label>
+          <input type="email" placeholder="your@email.com" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors">
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="font-label-md text-label-md text-grey-light uppercase tracking-wider">Message</label>
+          <textarea rows="4" placeholder="How can I help?" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors resize-none"></textarea>
+        </div>
+        <button type="submit" class="bg-primary-container text-background px-8 py-4 font-label-md text-label-md rounded-none hover:bg-white transition-colors duration-200 uppercase tracking-widest">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section><footer class="bg-transparent border-t border-outline-variant/20 text-on-surface w-full py-12 px-margin-mobile md:px-margin-desktop">
+  <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    <div class="md:col-span-4">
+      <span class="font-headline-md text-headline-md font-bold tracking-tighter">NASRIL ABBAS MUTHOHARUN ERGI PRATAMA</span>
+      <p class="mt-4 text-body-md opacity-80">Building intelligent solutions for the future of technology.</p>
+    </div>
+    <div class="md:col-span-4 grid grid-cols-2 gap-4">
+      <div class="flex flex-col gap-2">
+        <a href="#" class="font-label-md hover:underline">About</a>
+        <a href="#" class="font-label-md hover:underline">AI Services</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="font-label-md hover:underline">Projects</a>
+        <a href="#" class="font-label-md hover:underline">Contact</a>
+      </div>
+    </div>
+    <div class="md:col-span-4 flex md:justify-end gap-6">
+      <a href="#" class="hover:opacity-70 transition-opacity">GitHub</a>
+      <a href="#" class="hover:opacity-70 transition-opacity">LinkedIn</a>
+      <a href="#" class="hover:opacity-70 transition-opacity">Twitter</a>
+    </div>
+    <div class="md:col-span-12 border-t border-white/20 pt-8 mt-8 text-center opacity-60 text-label-md">© 2024 NASRIL ABBAS MUTHOHARUN ERGI PRATAMA. All rights reserved.</div>
+  </div>
+</footer>
+
+
+</body></html>

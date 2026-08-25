@@ -1,0 +1,109 @@
+/* css/style.css */
+
+/* Custom components using standard CSS (no @apply to work without build step) */
+.glass-card {
+    background-color: rgba(245, 250, 253, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 24px 0 rgba(34, 197, 224, 0.1);
+    border-radius: 24px;
+}
+
+.glass-panel {
+    background-color: rgba(245, 250, 253, 0.6);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(34, 197, 224, 0.15);
+    border-radius: 9999px;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #22c5e0, #0053cf);
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 20px rgba(34, 197, 224, 0.4);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: rgba(245, 250, 253, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #ffffff;
+    color: #001848;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary:hover {
+    background-color: #f5fafd;
+    transform: scale(1.05);
+}
+
+
+/* Scroll animation classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile backdrop-blur fallback and responsive adjustments */
+@media (max-width: 640px) {
+    .glass-card, .glass-panel {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+/* Fallback for no backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+    .glass-card {
+        background-color: rgba(245, 250, 253, 0.95);
+    }
+    .glass-panel {
+        background-color: rgba(245, 250, 253, 0.98);
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .btn-primary:hover, .btn-secondary:hover {
+        transform: none;
+    }
+}
