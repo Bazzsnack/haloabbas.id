@@ -312,18 +312,18 @@ function toggleLangMobile() {
       <p data-i18n="contact_subtitle" class="animate-on-scroll font-body-lg text-body-lg text-grey-light max-w-md">Let's build the right system for your needs. Please fill out this form and let's discuss your project.</p>
     </div>
     <div class="bg-surface-custom border border-outline-custom p-8">
-      <form class="animate-on-scroll flex flex-col gap-6">
+      <form id="contact-form" class="animate-on-scroll flex flex-col gap-6" onsubmit="sendToWhatsApp(event)">
         <div class="flex flex-col gap-2">
           <label class="font-label-md text-label-md text-grey-light uppercase tracking-wider" data-i18n="contact_name">Name</label>
-          <input type="text" placeholder="Your Name" data-i18n-placeholder="contact_name_ph" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors">
+          <input type="text" id="wa-name" required placeholder="Your Name" data-i18n-placeholder="contact_name_ph" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors">
         </div>
         <div class="flex flex-col gap-2">
           <label class="font-label-md text-label-md text-grey-light uppercase tracking-wider">Email</label>
-          <input type="email" placeholder="your@email.com" data-i18n-placeholder="contact_email_ph" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors">
+          <input type="email" id="wa-email" required placeholder="your@email.com" data-i18n-placeholder="contact_email_ph" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors">
         </div>
         <div class="flex flex-col gap-2">
           <label class="font-label-md text-label-md text-grey-light uppercase tracking-wider" data-i18n="contact_message">Message</label>
-          <textarea rows="4" placeholder="How can I help?" data-i18n-placeholder="contact_msg_ph" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors resize-none"></textarea>
+          <textarea id="wa-msg" required rows="4" placeholder="How can I help?" data-i18n-placeholder="contact_msg_ph" class="bg-background border border-outline-variant p-3 text-on-background focus:border-primary outline-none transition-colors resize-none"></textarea>
         </div>
         <button type="submit" class="bg-primary-container text-background px-8 py-4 font-label-md text-label-md rounded-none hover:bg-white transition-colors duration-200 uppercase tracking-widest" data-i18n="contact_btn">Send Message</button>
       </form>
@@ -358,4 +358,25 @@ function toggleLangMobile() {
     <div class="md:col-span-12 border-t border-white/20 pt-8 mt-8 text-center opacity-60 text-label-md">&copy; 2026 Haloabbas.id.</div>
   </div>
 </footer>
+
+<script>
+function sendToWhatsApp(e) {
+    e.preventDefault();
+    const name = document.getElementById('wa-name').value;
+    const email = document.getElementById('wa-email').value;
+    const msg = document.getElementById('wa-msg').value;
+    
+    const text = `Halo Abbas,
+
+Nama: ${name}
+Email: ${email}
+
+Pesan:
+${msg}`;
+
+    const encodedText = encodeURIComponent(text);
+    const waUrl = `https://wa.me/6285852590376?text=${encodedText}`;
+    window.open(waUrl, '_blank');
+}
+</script>
 </body></html>
