@@ -75,6 +75,56 @@ function applyTranslations(lang) {
     });
 }
 
+// Handle active states for nav links and language toggle
+function updateActiveStates() {
+    // Language Toggle State
+    const langBtn = document.getElementById('lang-toggle');
+    const mobileLangBtn = document.getElementById('lang-toggle-mobile');
+    
+    const enHTML = '<span class="material-symbols-outlined text-sm">language</span> ID / <span class="font-bold text-on-surface border-b border-on-surface pb-0.5">EN</span>';
+    const idHTML = '<span class="material-symbols-outlined text-sm">language</span> <span class="font-bold text-on-surface border-b border-on-surface pb-0.5">ID</span> / EN';
+    
+    if (langBtn) {
+        langBtn.innerHTML = currentLang === 'en' ? enHTML : idHTML;
+    }
+    if (mobileLangBtn) {
+        mobileLangBtn.innerHTML = currentLang === 'en' ? enHTML : idHTML;
+    }
+
+    // Scroll Spy for Contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        const contactLink = document.querySelector('nav a[href="#contact"]');
+        const homeLink = document.querySelector('nav a[href="/"]');
+        
+        if (contactLink && homeLink) {
+            window.addEventListener('scroll', () => {
+                const rect = contactSection.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.5) {
+                    contactLink.classList.add('font-bold', 'border-b', 'border-on-surface', 'pb-0.5');
+                    contactLink.classList.remove('text-on-surface-variant');
+                    contactLink.classList.add('text-on-surface');
+                    
+                    homeLink.classList.remove('font-bold', 'border-b', 'border-on-surface', 'pb-0.5');
+                    homeLink.classList.remove('text-on-surface');
+                    homeLink.classList.add('text-on-surface-variant');
+                } else {
+                    contactLink.classList.remove('font-bold', 'border-b', 'border-on-surface', 'pb-0.5');
+                    contactLink.classList.add('text-on-surface-variant');
+                    contactLink.classList.remove('text-on-surface');
+                    
+                    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+                        homeLink.classList.add('font-bold', 'border-b', 'border-on-surface', 'pb-0.5');
+                        homeLink.classList.remove('text-on-surface-variant');
+                        homeLink.classList.add('text-on-surface');
+                    }
+                }
+            });
+            window.dispatchEvent(new Event('scroll'));
+        }
+    }
+}
+
 // Portfolio Filtering
 function initPortfolioFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
