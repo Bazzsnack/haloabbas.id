@@ -110,7 +110,7 @@ function initPortfolioFilter() {
 function initGalleryModal() {
     // 1. Create Modal DOM
     const modalHTML = `
-        <div id="gallery-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="gallery-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0a0a] opacity-0 pointer-events-none transition-opacity duration-300">
             <button id="gallery-close" class="absolute top-6 right-6 text-white hover:text-primary transition-colors z-10 p-2">
                 <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">close</span>
             </button>
@@ -162,12 +162,14 @@ function initGalleryModal() {
     }
 
     function updateModalContent() {
-        // Simple fade out/in effect
         imgEl.style.opacity = '0';
-        setTimeout(() => {
-            imgEl.src = currentImages[currentIndex];
-            imgEl.onload = () => { imgEl.style.opacity = '1'; };
-        }, 150);
+        
+        const tempImg = new Image();
+        tempImg.onload = () => {
+            imgEl.src = tempImg.src;
+            imgEl.style.opacity = '1';
+        };
+        tempImg.src = currentImages[currentIndex];
         
         counterEl.textContent = `${currentIndex + 1} / ${currentImages.length}`;
         
@@ -191,6 +193,20 @@ function initGalleryModal() {
         currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
         updateModalContent();
     }
+
+    // Swipe support for mobile
+    let touchstartX = 0;
+    let touchendX = 0;
+    
+    modal.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    modal.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX;
+        if (touchendX < touchstartX - 50) showNext();
+        if (touchendX > touchstartX + 50) showPrev();
+    }, {passive: true});
 
     // Attach click events
     portfolioItems.forEach(item => {
