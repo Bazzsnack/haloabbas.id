@@ -1,5 +1,9 @@
 const translations = {
     "en": {
+
+        "work_title_gmap-scraper": "Google Maps Data Scraper",
+        "work_desc_gmap-scraper": "Browser extension tool for automatically scraping business data and locations from Google Maps.",
+
         "nav_home": "Home",
         "nav_work": "Projects",
         "nav_contact": "Contact",
@@ -55,6 +59,10 @@ const translations = {
         "work_title_kiranatour": "Kirana Tour",
         "work_desc_kiranatour": "Travel website with an integrated CMS, offering shuttle rentals, flight ticketing, and international tour packages.",},
     "id": {
+
+        "work_title_gmap-scraper": "Google Maps Data Scraper",
+        "work_desc_gmap-scraper": "Ekstensi browser untuk melakukan scraping data bisnis dan lokasi dari Google Maps secara otomatis.",
+
         "nav_home": "Beranda",
         "nav_work": "Proyek",
         "nav_contact": "Kontak",
