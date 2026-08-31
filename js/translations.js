@@ -1,6 +1,10 @@
 const translations = {
     "en": {
 
+        "work_title_qr-engine": "Multifunctional QR Engine",
+        "work_desc_qr-engine": "Multifunctional QR generation tool with 4 main features: Standard QR Generator, Google Search link builder, Google Maps Review automation, and a core engine combining QR codes with WPAP art.",
+
+
         "work_title_gmap-scraper": "Google Maps Data Scraper",
         "work_desc_gmap-scraper": "Browser extension tool for automatically scraping business data and locations from Google Maps.",
 
@@ -59,6 +63,10 @@ const translations = {
         "work_title_kiranatour": "Kirana Tour",
         "work_desc_kiranatour": "Travel website with an integrated CMS, offering shuttle rentals, flight ticketing, and international tour packages.",},
     "id": {
+
+        "work_title_qr-engine": "Mesin QR Multifungsi",
+        "work_desc_qr-engine": "Tools generate QR multifungsi dengan 4 fitur utama: Generator QR Standar, pembuat link pencarian Google, automasi Google Maps Review, serta core engine untuk menggabungkan QR dengan seni WPAP.",
+
 
         "work_title_gmap-scraper": "Google Maps Data Scraper",
         "work_desc_gmap-scraper": "Ekstensi browser untuk melakukan scraping data bisnis dan lokasi dari Google Maps secara otomatis.",
