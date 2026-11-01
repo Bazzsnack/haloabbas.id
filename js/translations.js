@@ -1,6 +1,10 @@
 const translations = {
     "en": {
 
+        "work_title_ai-ads-animation": "AI Product Ads & Animation",
+        "work_desc_ai-ads-animation": "High-quality product animation and commercial video creation powered by AI, delivering smooth, natural visuals free from typical stiff AI artifacts.",
+
+
         "work_title_qr-engine": "Multifunctional QR Engine",
         "work_desc_qr-engine": "Multifunctional QR generation tool with 4 main features: Standard QR Generator, Google Search link builder, Google Maps Review automation, and a core engine combining QR codes with WPAP art.",
 
@@ -63,6 +67,10 @@ const translations = {
         "work_title_kiranatour": "Kirana Tour",
         "work_desc_kiranatour": "Travel website with an integrated CMS, offering shuttle rentals, flight ticketing, and international tour packages.",},
     "id": {
+
+        "work_title_ai-ads-animation": "AI Product Ads & Animation",
+        "work_desc_ai-ads-animation": "Pembuatan animasi produk dan video iklan berkualitas tinggi menggunakan AI, menghasilkan visual yang halus, natural, dan bebas kesan kaku khas AI (anti AI-slop).",
+
 
         "work_title_qr-engine": "Mesin QR Multifungsi",
         "work_desc_qr-engine": "Tools generate QR multifungsi dengan 4 fitur utama: Generator QR Standar, pembuat link pencarian Google, automasi Google Maps Review, serta core engine untuk menggabungkan QR dengan seni WPAP.",

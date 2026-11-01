@@ -174,7 +174,8 @@ function initGalleryModal() {
             </button>
 
             <div class="relative w-full max-w-6xl max-h-[85vh] px-12 md:px-24 flex items-center justify-center">
-                <img id="gallery-img" src="" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl transition-transform duration-300" alt="Gallery Image">
+                <img id="gallery-img" src="" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl transition-opacity duration-300" alt="Gallery Image">
+                <video id="gallery-video" controls playsinline preload="metadata" class="hidden max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl bg-black"></video>
             </div>
 
             <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white font-label-mono bg-black/50 px-4 py-2 rounded-full backdrop-blur-md">
@@ -190,11 +191,20 @@ function initGalleryModal() {
     const prevBtn = document.getElementById('gallery-prev');
     const nextBtn = document.getElementById('gallery-next');
     const imgEl = document.getElementById('gallery-img');
+    const videoEl = document.getElementById('gallery-video');
     const counterEl = document.getElementById('gallery-counter');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
     let currentImages = [];
     let currentIndex = 0;
+
+    function stopVideo() {
+        if (!videoEl) return;
+        videoEl.pause();
+        videoEl.removeAttribute('src');
+        videoEl.load();
+        videoEl.classList.add('hidden');
+    }
 
     function openModal(images) {
         if (!images || images.length === 0) return;
@@ -207,19 +217,35 @@ function initGalleryModal() {
     }
 
     function closeModal() {
+        stopVideo();
         modal.classList.add('opacity-0', 'pointer-events-none');
         document.body.style.overflow = '';
     }
 
     function updateModalContent() {
-        imgEl.style.opacity = '0';
-        
-        const tempImg = new Image();
-        tempImg.onload = () => {
-            imgEl.src = tempImg.src;
-            imgEl.style.opacity = '1';
-        };
-        tempImg.src = currentImages[currentIndex];
+        stopVideo();
+        const currentSrc = currentImages[currentIndex];
+        const isVideo = /\.(mp4|webm|mov|ogg)(\?.*)?$/i.test(currentSrc);
+
+        if (isVideo) {
+            imgEl.classList.add('hidden');
+            imgEl.style.opacity = '0';
+            videoEl.classList.remove('hidden');
+            videoEl.src = encodeURI(currentSrc);
+            videoEl.load();
+            videoEl.play().catch(() => {});
+        } else {
+            videoEl.classList.add('hidden');
+            imgEl.classList.remove('hidden');
+            imgEl.style.opacity = '0';
+            
+            const tempImg = new Image();
+            tempImg.onload = () => {
+                imgEl.src = tempImg.src;
+                imgEl.style.opacity = '1';
+            };
+            tempImg.src = encodeURI(currentSrc);
+        }
         
         counterEl.textContent = `${currentIndex + 1} / ${currentImages.length}`;
         
@@ -249,14 +275,20 @@ function initGalleryModal() {
     let touchendX = 0;
     
     modal.addEventListener('touchstart', e => {
+        if (e.target === videoEl) return;
         touchstartX = e.changedTouches[0].screenX;
     }, {passive: true});
     
     modal.addEventListener('touchend', e => {
+        if (e.target === videoEl) return;
         touchendX = e.changedTouches[0].screenX;
         if (touchendX < touchstartX - 50) showNext();
         if (touchendX > touchstartX + 50) showPrev();
     }, {passive: true});
+
+    videoEl.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 
     // Attach click events
     portfolioItems.forEach(item => {
