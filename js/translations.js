@@ -1,6 +1,10 @@
 const translations = {
     "en": {
 
+        "work_title_guideguide": "GuideGuide Gold Edition",
+        "work_desc_guideguide": "Adobe Photoshop auto-layout plugin for generating precision guides instantly, featuring an Indonesian UI, custom grid formulas, multi-input support, and 1-click presets.",
+
+
         "work_title_ai-ads-animation": "AI Ads Animation",
         "work_desc_ai-ads-animation": "High-quality product animation and commercial video creation powered by AI, delivering smooth, natural visuals free from typical stiff AI artifacts.",
 
@@ -67,6 +71,10 @@ const translations = {
         "work_title_kiranatour": "Kirana Tour",
         "work_desc_kiranatour": "Travel website with an integrated CMS, offering shuttle rentals, flight ticketing, and international tour packages.",},
     "id": {
+
+        "work_title_guideguide": "GuideGuide Gold Edition",
+        "work_desc_guideguide": "Plugin auto-layout Adobe Photoshop berbahasa Indonesia untuk membuat garis bantu (guides) presisi secara instan, dilengkapi rumus custom grid, multi-input, dan eksekusi preset 1-klik.",
+
 
         "work_title_ai-ads-animation": "AI Ads Animation",
         "work_desc_ai-ads-animation": "Pembuatan animasi produk dan video iklan berkualitas tinggi menggunakan AI, menghasilkan visual yang halus, natural, dan bebas kesan kaku khas AI (anti AI-slop).",
