@@ -1,7 +1,7 @@
 const translations = {
     "en": {
 
-        "work_title_guideguide": "GuideGuide Gold Edition",
+        "work_title_guideguide": "Plugin Guide Guide for Photoshop",
         "work_desc_guideguide": "Adobe Photoshop auto-layout plugin for generating precision guides instantly, featuring an Indonesian UI, custom grid formulas, multi-input support, and 1-click presets.",
 
 
@@ -72,7 +72,7 @@ const translations = {
         "work_desc_kiranatour": "Travel website with an integrated CMS, offering shuttle rentals, flight ticketing, and international tour packages.",},
     "id": {
 
-        "work_title_guideguide": "GuideGuide Gold Edition",
+        "work_title_guideguide": "Plugin Guide Guide for Photoshop",
         "work_desc_guideguide": "Plugin auto-layout Adobe Photoshop berbahasa Indonesia untuk membuat garis bantu (guides) presisi secara instan, dilengkapi rumus custom grid, multi-input, dan eksekusi preset 1-klik.",
 
 
